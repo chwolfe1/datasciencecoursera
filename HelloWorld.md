@@ -79,7 +79,7 @@ print(cc)
 
 ## Factors
 
-Factors are objects that hold categorical values like "male", "female", "yes", "no". These are helpful because the relevance of the value is encoded in the object itself. You can think of factors as a set of integers where each integer has a label.You can apply factors to an existing vector. Factors are treated specially by modeling functions like 'lm()' and 'glm()'
+Factors are objects that hold categorical values like "male", "female", "yes", "no". These are helpful because the relevance of the value is encoded in the object itself. You can think of factors as a set of integers where each integer has a label.You can apply factors to an existing vector. Factors are treated specially by modeling functions like `lm()` and `glm()`
 
 ```
 
@@ -103,7 +103,7 @@ print(dd)
 
 ## Dataframes
 
-Data frames are similar to matrices in that you can store data in tabular form. However, unlike matrices, each element (column) in the dataframe can store a different class of data. Each element in the dataframe needs to be the same length. Dataframes are usually created by calling 'read.csv()' or 'read.table()'. You can convert a dataframe to a matrix using 'data.matrix()'. You can also create a dataframe using 'data.frame(<element1>, <element2>, <...>)'
+Data frames are similar to matrices in that you can store data in tabular form. However, unlike matrices, each element (column) in the dataframe can store a different class of data. Each element in the dataframe needs to be the same length. Dataframes are usually created by calling `read.csv()` or `read.table()`. You can convert a dataframe to a matrix using `data.matrix()`. You can also create a dataframe using `data.frame(<element1>, <element2>, <...>)`
 
 
 ### Naming objects
@@ -126,5 +126,25 @@ dimnames(d) <- list(c("uno", "dos", "tres", "quat", "cinc"), c("foo", "bar"))
 print(d)
 
 ```
+
+
+# Reading and Writing Data
+
+Reading and writing data into R is a key functionality. Important commands include:  
+- `read.table()` and `read.csv()`    
+    - these are the same except `read.csv()` defaults to a comma as the separator  
+- `readLines()` reads data into R as lines of text  
+- `source()` reads R code files into R that contain output from `dump()`  
+- `dget()` reads R code files into R that contain output from `dput()`  
+- `load` reads in saved workplaces  
+- `unserialize()` reads in single R objects in binary form  
+
+
+Here I will test another nested list  
+* first  
+    * second  
+* third  
+* fourth  
+
 
 
